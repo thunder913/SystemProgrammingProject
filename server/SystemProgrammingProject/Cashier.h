@@ -13,7 +13,7 @@ private:
 	bool GetCorrectChange(Money toReturn);
 	void GetLevaChange(int dollars);
 	void GetCoinsChange(int cents);
-	void PrintAndResetChange();
+	void PrintChange();
 	void AddMoneyToExchange(std::string moneyString, bool isLeva);
 	void SetDefaultBillsToReturn();
 	std::map<std::string, int, cmpByBiggestValue> billsAvailable;

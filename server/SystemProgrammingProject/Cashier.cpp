@@ -58,7 +58,7 @@ string Cashier::Pay(Money bill, string paidBills)
 	}
 	if (GetCorrectChange(toReturn)){
 		cout << " -Cashier: Returned " << totalChange << " as follows:\n";
-		PrintAndResetChange();
+		PrintChange();
 	}
 	else {
 		this->billsAvailable = startingBills;
@@ -203,7 +203,7 @@ void Cashier::GetCoinsChange(int cents) {
 	}
 }
 
-void Cashier::PrintAndResetChange() {
+void Cashier::PrintChange() {
 
 	for (auto& kv : billsToReturn) {
 		if (kv.second > 0) {
